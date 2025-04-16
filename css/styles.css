@@ -8,14 +8,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 95vh;
+  min-height: 100vh;
 }
 
 .form-container {
   background-color: white;
   padding: 50px;
+  width: 350px;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .form-header {
@@ -25,6 +26,8 @@ body {
 h1 {
   margin-top: 1%;
   margin-bottom: 40px;
+  font-weight: bolder;
+  font-size: 2em;
 }
 
 p {
@@ -32,6 +35,52 @@ p {
 }
 
 .form-group {
-  margin: 20px;
-  margin-left: 0px;
+  margin-bottom: 25px;
+}
+
+label {
+  font-size: 1.1em;
+  display: block;
+  margin-bottom: 10px;
+}
+
+#bill-error {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
+#bill, #bill-wtax, #tip-amount, #total-bill {
+  width: 100%;
+  font-size: 1em;
+  padding: 5px;
+  background-color: rgb(240, 240, 240);
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  border-bottom: 2px solid rgb(161, 209, 166);
+}
+
+.tip-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+#tip {
+  appearance: none;
+  width: 100%;
+  height: 5px;
+  border-radius: 3px;
+  background-color: rgb(240, 240, 240);
+}
+
+#tip::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgba(148, 187, 233, 1);
 }

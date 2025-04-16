@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ITMD-441 Lab 5</title>
+  <link rel="stylesheet" media="screen" href="css/meyers_and_normalize-form_reset.css">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,24 +20,27 @@
           <h1>Tip Calculator</h1>
         </div>
         <div class="form-group">
-          <label for="bill">Bill Total $:</label>
+          <label for="bill">Bill Total</label>
           <input type="text" name="bill" id="bill" required>
+          <p id="bill-error"></p>
         </div>
         <div class="form-group">
-          <label for="bill-wtax">Total Bill with Tax (11%):</label>
-          <input type="number" name="bill-wtax" id="bill-wtax" disabled>
+          <label for="bill-wtax">Total Bill with Tax (11%)</label>
+          <input type="text" name="bill-wtax" id="bill-wtax" disabled>
         </div>
         <div class="form-group">
-          <label for="tip">Tip %:</label>
+          <div class="tip-label">
+            <label for="tip">Tip %</label>
+            <output id="num">0</output>
+          </div>
           <input type="range" name="tip" id="tip" min="0" max="100" value="0" oninput="num.value = this.value">
-          <output id="num">0</output>
         </div>
         <div class="form-group">
-          <label for="tip-amount">Tip Amount $:</label>
+          <label for="tip-amount">Tip Amount</label>
           <input type="text" name="tip-amount" id="tip-amount" disabled>
         </div>
         <div class="form-group">
-          <label for="total-bill">Total Bill with Tip and Tax $:</label>
+          <label for="total-bill">Total Bill with Tip and Tax</label>
           <input type="text" name="total-bill" id="total-bill" disabled>
         </div>
       </form>

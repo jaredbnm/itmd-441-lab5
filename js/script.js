@@ -3,11 +3,14 @@ const billInput = document.getElementById('bill');
 const billwTax = document.getElementById('bill-wtax');
 const tipRange = document.getElementById('tip');
 const tipAmount = document.getElementById('tip-amount');
-const totalBill = document.getElementById('total-bill)');
+const totalBill = document.getElementById('total-bill');
+const billError = document.getElementById('bill-error');
 
 form.addEventListener('input', function() {
   calcBillWithTax();
   calcTipAmount();
+  calcTotalBill();
+  billValidation()
 });
 
 // calculate bill with 11% tax
@@ -26,4 +29,24 @@ function calcTipAmount() {
   let tipPercent = parseFloat(tipRange.value);
   let tip = billWithTax * tipPercent / 100;
   tipAmount.value = tip.toFixed(2);
+}
+
+// calculate total bill with tip and tax
+function calcTotalBill() {
+  let bill = parseFloat(billInput.value);
+  let tax = bill * 0.11;
+  let billWithTax = bill + tax;
+  let tipPercent = parseFloat(tipRange.value);
+  let tip = billWithTax * tipPercent / 100;
+  let total = billWithTax + tip;
+  totalBill.value = total.toFixed(2);
+}
+
+function billValidation() {
+  let bill = parseFloat(billInput.value);
+  if (isNaN(bill) || bill <= 0) {
+    billError.textContent = 'Please enter a valid number.';
+  } else {
+    billError.textContent = '';
+  }
 }
