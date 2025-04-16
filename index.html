@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ITMD-441 Lab 5</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="form-wrapper">
+    <div class="form-container">
+      <form method="get" action="null" autocomplete="on">
+        <p>ITMD 441 - Lab 5 - Tip Calculator</p>
+        <h1>Tip Calculator</h1>
+        <div class="form-group">
+          <label for="bill">Bill Total $:</label>
+          <input type="text" name="bill" required>
+        </div>
+        <div class="form-group">
+          <label for="bill-wtax">Total Bill with Tax (11%):</label>
+          <input type="number" name="bill-wtax" disabled>
+        </div>
+        <div class="form-group">
+          <label for="tip">Tip %:</label>
+          <input type="range" name="tip" min="0" max="100" value="0" oninput="num.value = this.value">
+          <output id="num">0</output>
+        </div>
+        <div class="form-group">
+          <label for="tip-amount">Tip Amount $:</label>
+          <input type="text" name="tip-amount" disabled>
+        </div>
+        <div class="form-group">
+          <label for="total-bill">Total Bill with Tip and Tax $:</label>
+          <input type="text" name="total-bill" disabled>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

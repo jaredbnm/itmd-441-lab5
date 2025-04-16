@@ -1,0 +1,25 @@
+body {
+  font-family: 'Mono Sans', 'DM Sans', sans-serif;
+  /*background-color: rgb(223, 248, 255);*/
+  background: #aeeeb5;
+  background: radial-gradient(circle,rgba(174, 238, 181, 1) 0%, rgba(148, 187, 233, 1) 100%);
+}
+
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+}
+
+.form-container {
+  background-color: white;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);;
+}
+
+.form-group {
+  margin: 10px;
+}
