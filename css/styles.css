@@ -13,7 +13,7 @@ body {
 
 .form-container {
   background-color: white;
-  padding: 50px;
+  padding: 40px;
   width: 350px;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -74,6 +74,11 @@ label {
   margin-bottom: 6px;
 }
 
+#num::after {
+  content: "%";
+  margin-left: 2px;
+}
+
 #tip {
   appearance: none;
   width: 100%;
@@ -84,13 +89,19 @@ label {
 
 #tip::-webkit-slider-thumb {
   appearance: none;
+  
   width: 20px;
   height: 20px;
   border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   background-color: rgba(148, 187, 233, 1);
   transition: box-shadow 0.3s ease;
 }
 
 #tip:hover::-webkit-slider-thumb {
   box-shadow: 0 0 10px 1px rgba(148, 187, 233, 0.6);
+}
+
+input {
+  font-family: 'Mono Sans', 'DM Sans', sans-serif;
 }
