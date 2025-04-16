@@ -20,24 +20,24 @@
         </div>
         <div class="form-group">
           <label for="bill">Bill Total $:</label>
-          <input type="text" name="bill" required>
+          <input type="text" name="bill" id="bill" required>
         </div>
         <div class="form-group">
           <label for="bill-wtax">Total Bill with Tax (11%):</label>
-          <input type="number" name="bill-wtax" disabled>
+          <input type="number" name="bill-wtax" id="bill-wtax" disabled>
         </div>
         <div class="form-group">
           <label for="tip">Tip %:</label>
-          <input type="range" name="tip" min="0" max="100" value="0" oninput="num.value = this.value">
+          <input type="range" name="tip" id="tip" min="0" max="100" value="0" oninput="num.value = this.value">
           <output id="num">0</output>
         </div>
         <div class="form-group">
           <label for="tip-amount">Tip Amount $:</label>
-          <input type="text" name="tip-amount" disabled>
+          <input type="text" name="tip-amount" id="tip-amount" disabled>
         </div>
         <div class="form-group">
           <label for="total-bill">Total Bill with Tip and Tax $:</label>
-          <input type="text" name="total-bill" disabled>
+          <input type="text" name="total-bill" id="total-bill" disabled>
         </div>
       </form>
     </div>
