@@ -60,6 +60,11 @@ label {
   border: none;
   box-sizing: border-box;
   border-bottom: 2px solid rgb(161, 209, 166);
+  transition: box-shadow 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+#bill:hover, #bill-wtax:hover, #tip-amount:hover, #total-bill:hover {
+  border-bottom-color: rgba(148, 187, 233, 1);
 }
 
 .tip-label {
@@ -83,4 +88,9 @@ label {
   height: 20px;
   border-radius: 50%;
   background-color: rgba(148, 187, 233, 1);
+  transition: box-shadow 0.3s ease;
+}
+
+#tip:hover::-webkit-slider-thumb {
+  box-shadow: 0 0 10px 1px rgba(148, 187, 233, 0.6);
 }
