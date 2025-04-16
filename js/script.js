@@ -24,10 +24,8 @@ function calcBillWithTax() {
 // getting the tip amount
 function calcTipAmount() {
   let bill = parseFloat(billInput.value);
-  let tax = bill * 0.11;
-  let billWithTax = bill + tax;
   let tipPercent = parseFloat(tipRange.value);
-  let tip = billWithTax * tipPercent / 100;
+  let tip = bill * tipPercent / 100;
   tipAmount.value = `$${tip.toFixed(2)}`;
 }
 
@@ -37,7 +35,7 @@ function calcTotalBill() {
   let tax = bill * 0.11;
   let billWithTax = bill + tax;
   let tipPercent = parseFloat(tipRange.value);
-  let tip = billWithTax * tipPercent / 100;
+  let tip = bill * tipPercent / 100;
   let total = billWithTax + tip;
   totalBill.value = `$${total.toFixed(2)}`;
 }
